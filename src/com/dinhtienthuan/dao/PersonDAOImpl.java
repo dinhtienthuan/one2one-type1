@@ -19,7 +19,6 @@ public class PersonDAOImpl implements PersonDAO {
     private SessionFactory sessionFactory;
 
     @SuppressWarnings("unchecked")
-    @Override
     @Transactional(transactionManager = "hibernateTransactionManager")
     public List<Person> getAllPersons() {
         List<Person> persons = new ArrayList<Person>();
@@ -29,6 +28,12 @@ public class PersonDAOImpl implements PersonDAO {
         persons = query.list();
 
         return persons;
+    }
+
+    @Transactional(transactionManager = "hibernateTransactionManager")
+    public void save(Person person) {
+        Session session = sessionFactory.getCurrentSession();
+        session.save(person);
     }
 
 }

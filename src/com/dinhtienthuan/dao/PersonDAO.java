@@ -6,4 +6,6 @@ import com.dinhtienthuan.entity.Person;
 
 public interface PersonDAO {
     public List<Person> getAllPersons();
+
+    public void save(Person person);
 }

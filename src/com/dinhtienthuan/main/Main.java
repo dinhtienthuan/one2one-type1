@@ -6,6 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.dinhtienthuan.dao.PersonDAO;
+import com.dinhtienthuan.entity.Address;
 import com.dinhtienthuan.entity.Person;
 
 public class Main {
@@ -16,11 +17,21 @@ public class Main {
         context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
         PersonDAO personDAO = context.getBean(PersonDAO.class);
+
+        Address address = new Address();
+        address.setCity("Tam Ky");
+
+        Person person = new Person();
+        person.setAddress(address);
+        person.setName("Huy");
+
+        personDAO.save(person);
+
         List<Person> persons = personDAO.getAllPersons();
 
-        for (Person person : persons) {
-            System.out.println(person);
-            System.out.println("\t" + person.getAddress());
+        for (Person p : persons) {
+            System.out.println(p);
+            System.out.println("\t" + p.getAddress());
         }
     }
 
