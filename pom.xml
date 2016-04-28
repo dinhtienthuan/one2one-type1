@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>one2one-type1</groupId>
-  <artifactId>one2one-type1</artifactId>
+  <groupId>unidirectional-one2one-foreignkey</groupId>
+  <artifactId>unidirectional-one2one-foreignkey</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>Hibernate Mapping - Unidirectional - One to One</name>
-  <description>This is an example for Hibernate mapping unidirectional associations One to One</description>
+  <name>Hibernate Mapping - Unidirectional - One to One - Foreign key</name>
+  <description>This is an example for Hibernate mapping unidirectional One to One association on a foreign key.</description>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
