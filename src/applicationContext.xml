@@ -10,9 +10,9 @@
 
   <bean id="hibernateDataSource" class="com.zaxxer.hikari.HikariDataSource">
     <property name="driverClassName" value="org.postgresql.Driver" />
-    <property name="jdbcUrl" value="jdbc:postgresql://localhost:5432/hibernate" />
-    <property name="username" value="timon" />
-    <property name="password" value="foobar" />
+    <property name="jdbcUrl" value="jdbc:postgresql://<host>:<port>/<database>" />
+    <property name="username" value="<username>" />
+    <property name="password" value="<password>" />
   </bean>
 
   <bean id="hibernateSessionFactory"
